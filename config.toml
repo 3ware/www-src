@@ -1,0 +1,28 @@
+baseURL = "http://www.3ware.co.uk/"
+languageCode = "en-gb"
+title = "3ware Ltd"
+theme = "introduction"
+
+[params]
+    themeStyle = "dark"
+    favicon    = "img/favicon.ico"
+    fadeIn     = true
+    email      = "contact@3ware.co.uk"
+
+    [params.home]
+        introHeight      = "medium"
+        showLatest       = "true"
+        showAllPosts     = "false"
+        localTime        = true
+        timeZone         = "Europe/London"
+        timeFormat       = "en-GB"
+
+    [[params.social]]
+        url   = "https://linkedin.com/company/3ware"
+        icon  = "linkedin-in" # icon name without the 'fa-'
+        icon_pack = "fab"
+
+    [[params.social]]
+        url   = "https://github.com/3ware"
+        icon  = "github" # icon name without the 'fa-'
+        icon_pack = "fab"
