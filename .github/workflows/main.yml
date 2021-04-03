@@ -37,7 +37,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v2
         with:
-          node-version: '15.x'
+          node-version: '15.13'
 
       - name: Cache dependencies
         uses: actions/cache@v1
@@ -47,7 +47,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
 
-      - run: npm i      
+      - run: npm ci      
       - run: hugo
   
       - name: Deploy
