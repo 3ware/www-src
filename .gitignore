@@ -1,0 +1,4 @@
+# do not push npm_modules
+# these were installed locally to generate the package.json
+# and package-lock.json files
+node_modules/
