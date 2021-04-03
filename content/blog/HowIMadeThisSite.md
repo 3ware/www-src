@@ -32,7 +32,7 @@ Credit where is it due, I read a number of tutorials for this, and tweaked thing
 5. Create a GitHub Action in repo01 to publish the site to repo02 when the commit from local repository is pushed to repo01.
     1. In the "Git Checkout" step, ensure the submodules are included so the action can use the theme submodule we will download in step 8.  
 
-        ```lang-yaml
+        ```yml
         name: Git Checkout    
           uses: actions/checkout@v2   
             with:   
@@ -40,27 +40,38 @@ Credit where is it due, I read a number of tutorials for this, and tweaked thing
         ```  
 
     2. external_repository: is set to repo02.
-    3. personal_token: is set to: `${{ secrets.<name_of_the_secret_created_in_step_4> }}`
+    3. personal_token: is set to:  
+
+       ```yml
+       ${{ secrets.<name_of_the_secret_created_in_step_4> }}
+       ```
 
     4. destination_dir: I set this to /docs so that README.md in /root is not removed.
-    5. keep_files: I set this to true so that the CNAME file in /docs is not removed. When using the CNAME option in the action, the CNAME file is created in /root, so it doesn't work.
+    5. keep_files: I set this to true so that the CNAME file in /docs is not removed. When using the CNAME option in the action, the CNAME file is created in /root, so it doesn't work.  
+
 6. Clone the Hugo source content repository, repo01, to your local machine.
 7. Install Hugo.
 8. Choose a theme and install as a git submodule in the same directory. **TIP** Fork the theme repo so you can make changes to things like colours and fonts.
   
-    `git submodule add <theme_repo> themes/<theme_name>`
+    ```zsh
+    git submodule add <forked_theme_repo> themes/<theme_name>
+    ```
 
-9. Update config.toml with theme, title, author, other parameters, paths to avatars and social links. See hugo and theme documentation for details. I tried a few themes and there are some differences.
+9.  Update config.toml with theme, title, author, other parameters, paths to avatars and social links. See hugo and theme documentation for details. I tried a few themes and there are some differences.
 10. Create a new post.  
 
-    `hugo new posts/<name_of_your_post>.md`
+    ```zsh
+    hugo new posts/<name_of_your_post>.md
+    ```  
 
 11. Add a 'summary' to the front matter section of the Markdown file created in step 5.
 12. Write the blog post in Markdown.
 13. Commit everything to save all the changes to your local repository.
 14. Preview your blog using the local hugo server.
 
-    `hugo server -D`
+    ```zsh
+    hugo server -D
+    ```  
 
     open the URL in a browser.
 
