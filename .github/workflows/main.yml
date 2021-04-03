@@ -1,4 +1,3 @@
- test, and deploy your project.
 # Github action to run hugo, generated website content, and push to blog-public repo
 
 name: GitHub Pages Action
