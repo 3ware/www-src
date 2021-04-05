@@ -57,7 +57,7 @@ Credit where is it due, I read a number of tutorials for this, and tweaked thing
     git submodule add <forked_theme_repo> themes/<theme_name>
     ```
 
-9.  Update config.toml with theme, title, author, other parameters, paths to avatars and social links. See hugo and theme documentation for details. I tried a few themes and there are some differences.
+9. Update config.toml with theme, title, author, other parameters, paths to avatars and social links. See hugo and theme documentation for details. I tried a few themes and there are some differences.
 10. Create a new post.  
 
     ```zsh
@@ -81,3 +81,54 @@ Credit where is it due, I read a number of tutorials for this, and tweaked thing
 ### The Good News
 
 The gruntwork is done. Next time I want to create a blog post, it's steps 10-15. Create posts, write Markdown, commit and push. The Github Action takes care of the rest.
+
+### Theme dependant steps
+
+In my case I am using the [Introduction](https://github.com/victoriadrake/hugo-theme-introduction) theme, so a few additional steps are required to set this up. This isn't necessary for all themes.
+
+1. Install the packages required by the theme in local repository. This automatically generates the packages-lock.json file used by npm to define dependencies.
+
+    ```zsh
+    npm i <package> <package> <package> <etc>
+    ```
+
+2. Create packages.json file, which lists packages required.
+
+    ```zsh
+    npm init --yes
+    ```
+
+3. Update the Github Action to use extended hugo and npm. Extended Hugo is required for PostCSS processing.
+
+    ```yml
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: Git Checkout
+        uses: actions/checkout@v2
+        with:
+          submodules: true
+        
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: "0.82.0"
+          extended: true # enable extended version.
+
+      - name: Setup Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: '15.13'
+
+      - name: Cache dependencies
+        uses: actions/cache@v1
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - run: npm ci   # this reads the packages-lock.json and packages-json files    
+      - run: hugo
+    ```
+
+4. Commit and push the changes to remote repo and watch the GitHub action go.
