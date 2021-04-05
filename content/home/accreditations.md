@@ -1,6 +1,6 @@
 ---
 title: "Accreditations"
-draft: true
+draft: false
 weight: 3
 tags: AWS,Amazon Web Services,AWS Certification,AWS Cloud
 ---
