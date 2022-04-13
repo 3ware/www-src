@@ -61,7 +61,7 @@ jobs:
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-          guthub_token: ${{ steps.get_workflow_token.outputs.token }}
+          github_token: ${{ steps.get_workflow_token.outputs.token }}
           external_repository: 3ware/www-public
           publish_dir: ./public # This is the source dir. ./public is the default.
           destination_dir: ./docs
