@@ -27,6 +27,14 @@ jobs:
         uses: actions/checkout@v2
         with:
           submodules: true
+          
+      - name: Get Token
+        id: get_workflow_token
+        uses: peter-murray/workflow-application-token-action@v1
+        with:
+          application_id: ${{ secrets.APPLICATION_ID }}
+          application_private_key: ${{ secrets.APPLICATION_PRIVATE_KEY }}
+          organization: 3ware
         
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
@@ -53,7 +61,7 @@ jobs:
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-          personal_token: ${{ secrets.HUGO_WEB_BUILD }}
+          guthub_token: ${{ steps.get_workflow_token.outputs.token }}
           external_repository: 3ware/www-public
           publish_dir: ./public # This is the source dir. ./public is the default.
           destination_dir: ./docs
