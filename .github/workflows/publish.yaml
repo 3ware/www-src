@@ -5,8 +5,11 @@ name: Publish Content
 # Controls when the action will run.
 on:
   # Triggers the workflow when a new version is released
-  release:
-    types: [published]
+  #release:
+  #  types: [published]
+  push:
+    branches:
+      - main
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -23,8 +26,6 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Git Checkout
         uses: actions/checkout@v2
-        env:
-          commit_message: ${{ github.event.head_commit.message }}
         with:
           submodules: true
 
