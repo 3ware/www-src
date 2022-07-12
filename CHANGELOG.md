@@ -1,0 +1,15 @@
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+## 1.0.0 (2022-07-12)
+
+
+### Bug Fixes
+
+* correct typo in ci file ([0d28a27](https://github.com/3ware/www-src/commit/0d28a27c896f582189d627ee884bdb3525b0f9fa))
+
+
+### Enhancement
+
+* Add terraform certification ([e8e32fc](https://github.com/3ware/www-src/commit/e8e32fc84acb7765f6358dab4979a30c02fdc88e))
