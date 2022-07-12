@@ -15,13 +15,13 @@ Yesterday, my terraform modules worked, Today, none of my terraform modules work
 
 #### The nitty gritty
 
-Today I returned to my terraform studies. To my surprise `terraform plan` did not look pretty at all. The last git commit message I wrote said "everything works (yay!)" - so why didn't it?  
+Today I returned to my terraform studies. To my surprise `terraform plan` did not look pretty at all. The last git commit message I wrote said "everything works (yay!)" - so why didn't it?
 
-I retraced my steps to the day before, where I'd run `brew upgrade`, among other things, so I checked my terraform version. Again, to my surprise, I was running version 0.14.9. I'm sure I was on 0.13.something before. So, how to downgrade and, more importantly, how to make sure this didn't happen again?  
+I retraced my steps to the day before, where I'd run `brew upgrade`, among other things, so I checked my terraform version. Again, to my surprise, I was running version 0.14.9. I'm sure I was on 0.13.something before. So, how to downgrade and, more importantly, how to make sure this didn't happen again?
 
-I found some useful info on [apple.stackexchange.com](https://apple.stackexchange.com/questions/171530/how-do-i-downgrade-node-or-install-a-specific-previous-version-using-homebrew#answer-262119) about downgrading node via brew, so I just applied the same logic to terraform.  
+I found some useful info on [apple.stackexchange.com](https://apple.stackexchange.com/questions/171530/how-do-i-downgrade-node-or-install-a-specific-previous-version-using-homebrew#answer-262119) about downgrading node via brew, so I just applied the same logic to terraform.
 
-`brew search terraform`  reveals the different versions available.  
+`brew search terraform` reveals the different versions available.
 
 `brew unlink terraform` removes the symlinks brew creates in /usr/local
 
@@ -31,6 +31,6 @@ I found some useful info on [apple.stackexchange.com](https://apple.stackexchang
 
 And now for the really important part:
 
-`brew pin terraform` will prevent terraform from being upgraded next time I run `brew upgrade`.  
+`brew pin terraform` will prevent terraform from being upgraded next time I run `brew upgrade`.
 
-Running `terraform version` displays **Terraform v0.13.6** and `terraform plan` looks good once more.  
+Running `terraform version` displays **Terraform v0.13.6** and `terraform plan` looks good once more.

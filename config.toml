@@ -4,42 +4,42 @@ title = "3ware Ltd"
 theme = "introduction"
 
 [params]
-    themeStyle = "dark"
-    favicon    = "img/favicon.ico"
-    fadeIn     = false
-    email      = "contact@3ware.co.uk"
+themeStyle = "dark"
+favicon = "img/favicon.ico"
+fadeIn = false
+email = "contact@3ware.co.uk"
 
-    [params.home]
-        introHeight      = "medium"
-        showLatest       = true
-        showAllPosts     = false
-        localTime        = true
-        timeZone         = "Europe/London"
-        timeFormat       = "en-GB"
+[params.home]
+introHeight = "medium"
+showLatest = true
+showAllPosts = false
+localTime = true
+timeZone = "Europe/London"
+timeFormat = "en-GB"
 
-    [[params.social]]
-        url   = "https://linkedin.com/company/3ware"
-        icon  = "linkedin-in" # icon name without the 'fa-'
-        icon_pack = "fab"
+[[params.social]]
+url = "https://linkedin.com/company/3ware"
+icon = "linkedin-in"                       # icon name without the 'fa-'
+icon_pack = "fab"
 
-    [[params.social]]
-        url   = "https://github.com/3ware"
-        icon  = "github" # icon name without the 'fa-'
-        icon_pack = "fab"
+[[params.social]]
+url = "https://github.com/3ware"
+icon = "github"                  # icon name without the 'fa-'
+icon_pack = "fab"
 
 [markup]
-  defaultMarkdownHandler = "goldmark"
-  [markup.goldmark]
-  [markup.goldmark.renderer]
-    unsafe = true
-  [markup.highlight]
-    codeFences = true
-    guessSyntax = false
-    hl_Lines = ""
-    lineNoStart = 1
-    lineNos = false
-    lineNumbersInTable = true
-    noClasses = true
-    # For styles, see https://xyproto.github.io/splash/docs/longer/all.html
-    style = "solarized-dark"
-    tabWidth = 4
+defaultMarkdownHandler = "goldmark"
+[markup.goldmark]
+[markup.goldmark.renderer]
+unsafe = true
+[markup.highlight]
+codeFences = true
+guessSyntax = false
+hl_Lines = ""
+lineNoStart = 1
+lineNos = false
+lineNumbersInTable = true
+noClasses = true
+# For styles, see https://xyproto.github.io/splash/docs/longer/all.html
+style = "solarized-dark"
+tabWidth = 4
