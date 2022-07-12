@@ -53,7 +53,7 @@ jobs:
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-          personal_token: ${{ secrets.HUGO_WEB_BUILD }}
+          deploy_key: ${{ secrets.ACTION_DEPLOY_KEY }}
           external_repository: 3ware/www-public
           publish_dir: ./public # This is the source dir. ./public is the default.
           destination_dir: ./docs
