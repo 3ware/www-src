@@ -60,6 +60,6 @@ jobs:
           publish_dir: ./public # This is the source dir. ./public is the default.
           destination_dir: ./docs
           keep_files: true
-          user_name: chris3ware
-          user_email: chris@3ware.co.uk
+          user_name: github-actions[bot]
+          user_email: github-actions[bot]@users.noreply.github.com
           publish_branch: main
