@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.0](https://github.com/3ware/www-src/compare/v1.0.0...v1.1.0) (2022-07-12)
+
+
+### Enhancement
+
+* **www:** Reduce accreditation image size ([#4](https://github.com/3ware/www-src/issues/4)) ([462f98e](https://github.com/3ware/www-src/commit/462f98e93dfbae9320611bf2c3ed25927ad6d857))
+
 ## 1.0.0 (2022-07-12)
 
 
