@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+### [1.1.1](https://github.com/3ware/www-src/compare/v1.1.0...v1.1.1) (2022-07-12)
+
+
+### Bug Fixes
+
+* **release:** Use full commit message in publish workflow ([#5](https://github.com/3ware/www-src/issues/5)) ([b5b272f](https://github.com/3ware/www-src/commit/b5b272f3a02a1a1d6989021a9ecc39dab04e93d6))
+
 ## [1.1.0](https://github.com/3ware/www-src/compare/v1.0.0...v1.1.0) (2022-07-12)
 
 
