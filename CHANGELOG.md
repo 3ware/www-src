@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.0](https://github.com/3ware/www-src/compare/v1.1.1...v1.2.0) (2022-07-13)
+
+
+### Features
+
+* **publish:** Remove test page ([#6](https://github.com/3ware/www-src/issues/6)) ([2551680](https://github.com/3ware/www-src/commit/25516809811e1cef026ba66d9d0b483d39477720))
+
 ### [1.1.1](https://github.com/3ware/www-src/compare/v1.1.0...v1.1.1) (2022-07-12)
 
 
