@@ -41,5 +41,5 @@ lineNos = false
 lineNumbersInTable = true
 noClasses = true
 # For styles, see https://xyproto.github.io/splash/docs/longer/all.html
-style = "solarized-dark"
+style = "gruvbox"
 tabWidth = 4
