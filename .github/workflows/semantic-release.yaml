@@ -6,7 +6,11 @@ on:
     branches:
       - main
     paths:
-      - "content/**/*.md"
+      - "content/**"
+      - "resources/**"
+      - "static/**"
+      - "themes/**"
+      - "config.toml"
       - ".github/workflows/semantic-release.yaml"
 
 jobs:
