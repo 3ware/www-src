@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.3.0](https://github.com/3ware/www-src/compare/v1.2.0...v1.3.0) (2022-07-14)
+
+
+### Enhancement
+
+* **www:** Add copyright notice to website footer ([#7](https://github.com/3ware/www-src/issues/7)) ([0342186](https://github.com/3ware/www-src/commit/03421865013b787d6e016358448cd6297db5b26f))
+* **www:** Change codefence style ([84e140c](https://github.com/3ware/www-src/commit/84e140c8ff356faeee18cad10f546be1c0803de1))
+
 ## [1.2.0](https://github.com/3ware/www-src/compare/v1.1.1...v1.2.0) (2022-07-13)
 
 
