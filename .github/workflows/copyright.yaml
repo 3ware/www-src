@@ -38,7 +38,7 @@ jobs:
       - name: commit changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          file_pattern: config.toml
+          #file_pattern: config.toml
           commit_message: "chore(www): Update footer text for ${{ env.NEW_YEAR }} copyright year"
           commit_user_name: "3ware-release[bot]"
           commit_user_email: "3ware-release[bot]@users.noreply.github.com"
