@@ -33,7 +33,7 @@ jobs:
         with:
           file: "config.toml"
           key: "languages.en.params.footerText"
-          value: "Copyright &copy; 2021-${{ env.NEW_YEAR }} 3ware Ltd"
+          value: "Copyright 2021-${{ env.NEW_YEAR }} 3ware Ltd"
           #file: "test.toml"
           #key: "key.value"
           #value: "another value added by the workflow"
