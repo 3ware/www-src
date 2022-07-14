@@ -9,23 +9,23 @@ favicon = "img/favicon.ico"
 fadeIn = false
 email = "contact@3ware.co.uk"
 
-[params.home]
-introHeight = "medium"
-showLatest = true
-showAllPosts = false
-localTime = true
-timeZone = "Europe/London"
-timeFormat = "en-GB"
+  [params.home]
+  introHeight = "medium"
+  showLatest = true
+  showAllPosts = false
+  localTime = true
+  timeZone = "Europe/London"
+  timeFormat = "en-GB"
 
-[[params.social]]
-url = "https://linkedin.com/company/3ware"
-icon = "linkedin-in"
-icon_pack = "fab"
+  [[params.social]]
+  url = "https://linkedin.com/company/3ware"
+  icon = "linkedin-in"
+  icon_pack = "fab"
 
-[[params.social]]
-url = "https://github.com/3ware"
-icon = "github"
-icon_pack = "fab"
+  [[params.social]]
+  url = "https://github.com/3ware"
+  icon = "github"
+  icon_pack = "fab"
 
 [markup]
 defaultMarkdownHandler = "goldmark"
@@ -33,16 +33,16 @@ defaultMarkdownHandler = "goldmark"
 [markup.goldmark.renderer]
 unsafe = true
 
-[markup.highlight]
-codeFences = true
-guessSyntax = false
-hl_Lines = ""
-lineNoStart = 1
-lineNos = false
-lineNumbersInTable = true
-noClasses = true
-style = "gruvbox"
-tabWidth = 4
+  [markup.highlight]
+  codeFences = true
+  guessSyntax = false
+  hl_Lines = ""
+  lineNoStart = 1
+  lineNos = false
+  lineNumbersInTable = true
+  noClasses = true
+  style = "gruvbox"
+  tabWidth = 4
 
 [languages.en]
 languageName = "English"
@@ -51,6 +51,6 @@ contentDir = "content/en"
 weight = 0
 title = "3ware Ltd"
 
-[languages.en.params]
-description = "3ware Ltd is a specialist network and security consultancy with 18 years of industry experience. Our main focus is helping clients with Data Centre design, cloud migrations and digital transformation projects in the Public Sector and the Enterprise."
-footerText = "Copyright &copy; 2021-xxxx 3ware Ltd"
+  [languages.en.params]
+  description = "3ware Ltd is a specialist network and security consultancy with 18 years of industry experience. Our main focus is helping clients with Data Centre design, cloud migrations and digital transformation projects in the Public Sector and the Enterprise."
+  footerText = "Copyright &copy; 2021-xxxx 3ware Ltd"
