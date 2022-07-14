@@ -8178,11 +8178,6 @@ pre {
 .markdown pre {
   border-radius: 3px; }
 
-.markdown img {
-  display: block;
-  margin: 2rem auto;
-  max-width: 100%; }
-
 .modal-card-title {
   color: #539bf5; }
 
