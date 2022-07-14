@@ -36,12 +36,13 @@ jobs:
          #value: "Copyright &copy; 2021-${{ env.NEW_YEAR }} 3ware Ltd"
          file: "test.toml"
          key: "key.value"
-         value: "a value added by the workflow"         
+         value: "another value added by the workflow"         
          
       - name: commit changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           #file_pattern: config.toml
+          file_pattern: test.toml
           commit_message: "chore(www): Update footer text for ${{ env.NEW_YEAR }} copyright year"
           commit_user_name: "3ware-release[bot]"
           commit_user_email: "3ware-release[bot]@users.noreply.github.com"
