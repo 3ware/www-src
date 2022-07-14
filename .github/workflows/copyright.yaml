@@ -1,0 +1,45 @@
+name: copyright
+
+on:
+  schedule:
+    - cron: "0 0 1 1 *"
+
+  workflow_dispatch:
+
+jobs:
+  copyright: 
+    name: Update copyright footer
+    runs-on: ubuntu-latest
+            
+    steps:
+      # Set the New Year as an environment variable
+      - run: echo "NEW_YEAR=$(date +%d)" > $GITHUB_ENV
+      
+      - name: Get Token
+        id: get_workflow_token
+        uses: peter-murray/workflow-application-token-action@v1
+        with:
+          application_id: ${{ secrets.APPLICATION_ID }}
+          application_private_key: ${{ secrets.APPLICATION_PRIVATE_KEY }}
+          organization: 3ware
+          
+      - name: checkout
+        uses: actions/checkout@v3
+        with:
+          token: ${{ steps.get_workflow_token.outputs.token }}
+        
+      - name: update config file
+        uses: ciiiii/toml-editor@1.0.0
+        with:
+         file: "config.toml"
+         key: '"languages.en.params.footerText"'
+         value: '"Copyright &copy; 2021-${{ env.NEW_YEAR }} 3ware Ltd"'
+         
+      - name: commit changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          file_pattern: config.toml
+          commit_message: "chore(www): Update footer text for ${{ env.NEW_YEAR }} copyright year"
+          commit_user_name: "3ware-release[bot]"
+          commit_user_email: "3ware-release[bot]@users.noreply.github.com"
+          commit_author: "36608309+chris3ware@users.noreply.github.com"
