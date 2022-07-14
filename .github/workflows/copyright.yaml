@@ -10,14 +10,13 @@ jobs:
   copyright:
     name: Update copyright footer
     runs-on: ubuntu-latest
+    env:
+      LAST_YEAR: $(date +%Y --date "1 year ago")
+      NEW_YEAR: $(date +%Y)
 
     steps:
       # Set the New Year as an environment variable
       # - run: echo "NEW_YEAR=$(date +%Y)" > $GITHUB_ENV
-      env:
-        LAST_YEAR: $(date +%Y --date "1 year ago")
-        NEW_YEAR: $(date +%Y)
-
       - name: Get Token
         id: get_workflow_token
         uses: peter-murray/workflow-application-token-action@v1
