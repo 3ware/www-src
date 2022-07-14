@@ -17,7 +17,3 @@ lint:
     - linters: [prettier]
       paths:
         - resources/**
-    #* Prevent taplo changing config.toml
-    - linters: [taplo]
-      paths:
-        - config.toml
