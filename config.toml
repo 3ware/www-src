@@ -43,3 +43,14 @@ noClasses = true
 # For styles, see https://xyproto.github.io/splash/docs/longer/all.html
 style = "gruvbox"
 tabWidth = 4
+
+[languages]
+[languages.en]
+languageName = "English"
+languageCode = "en-gb"
+contentDir = "content/en"
+weight = 0
+title = "3ware Ltd"
+[languages.en.params]
+description = "3ware Ltd is a specialist network and security consultancy with 18 years of industry experience. Our main focus is helping clients with Data Centre design, cloud migrations and digital transformation projects in the Public Sector and the Enterprise." # Max 160 characters show in search results
+footerText = "Copyright &copy; 2021-2022 3ware Ltd"
