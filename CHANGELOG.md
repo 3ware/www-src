@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.4.0](https://github.com/3ware/www-src/compare/v1.3.0...v1.4.0) (2022-07-14)
+
+
+### Enhancement
+
+* **www:** Remove image rendering CSS ([#8](https://github.com/3ware/www-src/issues/8)) ([3454a8a](https://github.com/3ware/www-src/commit/3454a8ad22998bf7844bdeeddbc0c72f9fe58c82))
+
 ## [1.3.0](https://github.com/3ware/www-src/compare/v1.2.0...v1.3.0) (2022-07-14)
 
 
