@@ -10,10 +10,20 @@ on:
   push:
     branches:
       - main
-
+    paths:
+      - content/**
+      - resources/**
+      - static/**
+      - themes/**
+      - config.toml
+      
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
-
+    inputs:
+      commit_message:
+        description: "Insert conventional commit message"
+        required: true
+      
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
@@ -63,5 +73,6 @@ jobs:
           user_name: github-actions[bot]
           user_email: github-actions[bot]@users.noreply.github.com
           publish_branch: main
-          full_commit_message: ${{ github.event.head_commit.message }}
+          #full_commit_message: ${{ github.event.head_commit.message }}
+          full_commit_message: ${{ inputs.commit_message }}
           
