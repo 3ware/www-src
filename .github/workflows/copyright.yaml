@@ -31,9 +31,12 @@ jobs:
       - name: update config file
         uses: ciiiii/toml-editor@1.0.0
         with:
-         file: "config.toml"
-         key: "languages.en.params.footerText"
-         value: "Copyright &copy; 2021-${{ env.NEW_YEAR }} 3ware Ltd"
+         #file: "config.toml"
+         #key: "languages.en.params.footerText"
+         #value: "Copyright &copy; 2021-${{ env.NEW_YEAR }} 3ware Ltd"
+         file: "test.toml"
+         key: "key.value"
+         value: "a value added by the workflow"         
          
       - name: commit changes
         uses: stefanzweifel/git-auto-commit-action@v4
