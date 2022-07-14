@@ -39,7 +39,7 @@ jobs:
           #file: "test.toml"
           #key: "key.value"
           #value: "another value added by the workflow"
-        run: sed -i -e 's:2021-${{ env.LAST_YEAR }}:2021-${{ NEW_YEAR }}:g' config.toml
+        run: sed -i -e 's:2021-${{ env.LAST_YEAR }}:2021-${{ env.NEW_YEAR }}:g' config.toml
 
       - name: commit changes
         uses: stefanzweifel/git-auto-commit-action@v4
