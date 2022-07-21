@@ -1,0 +1,50 @@
+# Github action to run hugo, generated website content, and push to blog-public repo
+
+name: Check Hugo Build
+
+on:
+  pull_request:
+    types:
+      - opened
+      - edited
+      - synchronize
+    branches:
+      - "dependabot/**"
+    paths:
+      - "package-lock.json"
+      - "package.json"
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    #TODO set the permissions for $GITHUB_TOKEN
+    #permissions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Git Checkout
+        uses: actions/checkout@v2
+        with:
+          submodules: true
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: "0.101.0"
+          extended: true
+
+      - name: Setup Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: "15.13"
+
+      - name: Cache dependencies
+        uses: actions/cache@v1
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - run: npm ci
+      - run: hugo --minify
