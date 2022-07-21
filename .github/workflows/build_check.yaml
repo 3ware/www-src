@@ -8,16 +8,12 @@ on:
       - opened
       - edited
       - synchronize
-    branches:
-      - "dependabot/**"
-    paths:
-      - "package-lock.json"
-      - "package.json"
 
   workflow_dispatch:
 
 jobs:
-  build:
+  run_if:
+    if: startsWith(github.head_ref, 'dependabot/')
     #TODO set the permissions for $GITHUB_TOKEN
     #permissions:
     runs-on: ubuntu-latest
