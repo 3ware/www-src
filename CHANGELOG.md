@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+### [1.4.3](https://github.com/3ware/www-src/compare/v1.4.2...v1.4.3) (2022-07-22)
+
+
+### Bug Fixes
+
+* **deps:** bump postcss from 8.2.9 to 8.2.13 ([#13](https://github.com/3ware/www-src/issues/13)) ([446fbe8](https://github.com/3ware/www-src/commit/446fbe8019934c588d7f19ddc4f6d875712dffbc))
+
 ### [1.4.2](https://github.com/3ware/www-src/compare/v1.4.1...v1.4.2) (2022-07-22)
 
 
