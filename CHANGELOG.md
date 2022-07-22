@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+### [1.4.1](https://github.com/3ware/www-src/compare/v1.4.0...v1.4.1) (2022-07-22)
+
+
+### Bug Fixes
+
+* **deps:** bump browserslist from 4.16.3 to 4.21.2 ([#11](https://github.com/3ware/www-src/issues/11)) ([2f2b0c3](https://github.com/3ware/www-src/commit/2f2b0c32bb8f45e48fd00f121a154cb2fe8a490a))
+
 ## [1.4.0](https://github.com/3ware/www-src/compare/v1.3.0...v1.4.0) (2022-07-14)
 
 
