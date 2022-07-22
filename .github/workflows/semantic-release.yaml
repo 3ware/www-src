@@ -12,6 +12,8 @@ on:
       - "themes/**"
       - "config.toml"
       - ".github/workflows/semantic-release.yaml"
+      - "package-lock.json"
+      - "package.json"
 
 jobs:
   main:
