@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file.
 
+### [1.4.3](https://github.com/3ware/www-src/compare/v1.4.2...v1.4.3) (2022-07-22)
+
+
+### Bug Fixes
+
+* **deps:** bump postcss from 8.2.9 to 8.2.13 ([#13](https://github.com/3ware/www-src/issues/13)) ([446fbe8](https://github.com/3ware/www-src/commit/446fbe8019934c588d7f19ddc4f6d875712dffbc))
+
+### [1.4.2](https://github.com/3ware/www-src/compare/v1.4.1...v1.4.2) (2022-07-22)
+
+
+### Bug Fixes
+
+* **deps:** bump ansi-regex from 5.0.0 to 5.0.1 ([#12](https://github.com/3ware/www-src/issues/12)) ([6fc3456](https://github.com/3ware/www-src/commit/6fc3456dbbd5e40d60a20b9fbc8caff2a86ba3ab))
+
+### [1.4.1](https://github.com/3ware/www-src/compare/v1.4.0...v1.4.1) (2022-07-22)
+
+
+### Bug Fixes
+
+* **deps:** bump browserslist from 4.16.3 to 4.21.2 ([#11](https://github.com/3ware/www-src/issues/11)) ([2f2b0c3](https://github.com/3ware/www-src/commit/2f2b0c32bb8f45e48fd00f121a154cb2fe8a490a))
+
 ## [1.4.0](https://github.com/3ware/www-src/compare/v1.3.0...v1.4.0) (2022-07-14)
 
 
