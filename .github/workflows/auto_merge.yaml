@@ -1,0 +1,29 @@
+#* Workflow file to auto-merge dependabot Pull Requests
+name: Dependabot auto-merge
+on:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  dependabot:
+    runs-on: ubuntu-latest
+    if: ${{ github.actor == 'dependabot[bot]' }}
+    steps:
+      - name: Get Token
+        id: get_workflow_token
+        uses: peter-murray/workflow-application-token-action@v1
+        with:
+          application_id: ${{ secrets.APPLICATION_ID }}
+          application_private_key: ${{ secrets.APPLICATION_PRIVATE_KEY }}
+          organization: 3ware
+      - name: Dependabot metadata
+        id: metadata
+        uses: dependabot/fetch-metadata@v1.1.1
+        with:
+          github-token: "${{ steps.get_workflow_token.outputs.token }}"
+      - name: Enable auto-merge for Dependabot PRs
+        if: ${{ contains(steps.metadata.outputs.dependency-names, 'browserslist') && steps.metadata.outputs.update-type != 'version-update:semver-major' }}
+        run: gh pr merge --auto --squash "$PR_URL"
+        env:
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          GITHUB_TOKEN: ${{ steps.get_workflow_token.outputs.token }}
