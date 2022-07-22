@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+### [1.4.2](https://github.com/3ware/www-src/compare/v1.4.1...v1.4.2) (2022-07-22)
+
+
+### Bug Fixes
+
+* **deps:** bump ansi-regex from 5.0.0 to 5.0.1 ([#12](https://github.com/3ware/www-src/issues/12)) ([6fc3456](https://github.com/3ware/www-src/commit/6fc3456dbbd5e40d60a20b9fbc8caff2a86ba3ab))
+
 ### [1.4.1](https://github.com/3ware/www-src/compare/v1.4.0...v1.4.1) (2022-07-22)
 
 
