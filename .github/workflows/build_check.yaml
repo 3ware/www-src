@@ -16,6 +16,8 @@ jobs:
     #permissions:
     name: Check Hugo build
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       - name: Git Checkout
         uses: actions/checkout@v2
