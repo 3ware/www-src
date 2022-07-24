@@ -30,13 +30,17 @@ jobs:
           token: ${{ steps.get_workflow_token.outputs.token }}
 
       - name: update config file
-        run: sed -i -e 's:2021-${{ env.LAST_YEAR }}:2021-${{ env.NEW_YEAR }}:g' config.toml
+        run: >-
+          sed -i -e 's:2021-${{ env.LAST_YEAR }}:
+          2021-${{ env.NEW_YEAR }}:g' config.toml
 
       - name: commit changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           file_pattern: config.toml
-          commit_message: "chore(www): Update footer text for ${{ env.NEW_YEAR }} copyright year"
+          commit_message: >-
+            "chore(www): Update footer text for ${{ env.NEW_YEAR }}
+             copyright year"
           commit_user_name: "3ware-release[bot]"
           commit_user_email: "3ware-release[bot]@users.noreply.github.com"
           commit_author: "36608309+chris3ware@users.noreply.github.com"
