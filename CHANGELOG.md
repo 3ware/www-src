@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.5.0](https://github.com/3ware/www-src/compare/v1.4.3...v1.5.0) (2022-08-18)
+
+
+### Bug Fixes
+
+* **deps:** bump nanoid from 3.1.22 to 3.3.4 ([#14](https://github.com/3ware/www-src/issues/14)) ([48cbd7e](https://github.com/3ware/www-src/commit/48cbd7e1b36f584d0b9f4d865ee55bb6b3620fc4))
+
+
+### Enhancement
+
+* **www:** Add AWS Network Specialty certification ([#23](https://github.com/3ware/www-src/issues/23)) ([d63a676](https://github.com/3ware/www-src/commit/d63a6764ab541546ad31539ad4761d93e3b314cb))
+
 ### [1.4.3](https://github.com/3ware/www-src/compare/v1.4.2...v1.4.3) (2022-07-22)
 
 
