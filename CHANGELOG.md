@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.7.0](https://github.com/3ware/www-src/compare/v1.6.0...v1.7.0) (2022-09-23)
+
+
+### Enhancement
+
+* **www:** Move keybase.txt to root of static ([#26](https://github.com/3ware/www-src/issues/26)) ([2f05894](https://github.com/3ware/www-src/commit/2f05894d4e0172e9bbf43ab575e375ecf630ac90))
+
 ## [1.6.0](https://github.com/3ware/www-src/compare/v1.5.0...v1.6.0) (2022-09-23)
 
 
