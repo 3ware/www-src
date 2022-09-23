@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.6.0](https://github.com/3ware/www-src/compare/v1.5.0...v1.6.0) (2022-09-23)
+
+
+### Features
+
+* **www:** Add keybase verification txt file ([#24](https://github.com/3ware/www-src/issues/24)) ([9d3147e](https://github.com/3ware/www-src/commit/9d3147ef4fe5b54a5ffffda40770b6cfba9d458b))
+
 ## [1.5.0](https://github.com/3ware/www-src/compare/v1.4.3...v1.5.0) (2022-08-18)
 
 
