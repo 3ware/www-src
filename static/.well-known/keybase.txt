@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/chris3ware
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://www.3ware.co.uk
+  * I am chris3ware (https://keybase.io/chris3ware) on keybase.
+  * I have a public key ASCKnRRxtbOcN8FiK3S5wLIzC4Q9HpA1ZELyGexMAg1gGAo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01208a9d1471b5b39c37c1622b74b9c0b2330b843d1e90356442f219ec4c020d60180a",
+      "host": "keybase.io",
+      "kid": "01208a9d1471b5b39c37c1622b74b9c0b2330b843d1e90356442f219ec4c020d60180a",
+      "uid": "43659aa30122db7d31f68182f5d24319",
+      "username": "chris3ware"
+    },
+    "merkle_root": {
+      "ctime": 1663919978,
+      "hash": "fa892f4ec57ddcfe25b49896b0e458ac14d40c602a42079e8418128353bbd072f411dec810243b94694f5600cc6ee2a826d001d686d3e47d3739687e414cb9b5",
+      "hash_meta": "e2b1499612638531a89067e01190218b6234c1612f0418ccee9eba05e108e969",
+      "seqno": 23247091
+    },
+    "service": {
+      "entropy": "RTNaG/sN1jI5wEVagCf8Uhjv",
+      "hostname": "www.3ware.co.uk",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "6.0.1"
+  },
+  "ctime": 1663920003,
+  "expire_in": 504576000,
+  "prev": "782efa18db25fcd277c0c24d0a69c5efba57cbe0578aac4e4cd4e124521d6f46",
+  "seqno": 33,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgip0UcbWznDfBYit0ucCyMwuEPR6QNWRC8hnsTAINYBgKp3BheWxvYWTESpcCIcQgeC76GNsl/NJ3wMJNCmnF77pXy+BXiqxOTNThJFIdb0bEIEyLra7kMNKhlrudn8bpYCMehewQFNEsBhmSQIS/6AbkAgHCo3NpZ8RAMUdJM3eH1zWhUoUa3/rdfzY8nYoRtcei5m3As/q4P2EE1A2jYda+VQoNkGujNpYkTTao5PLdzZVqXqgIF5KRDqhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIGY8PfVyx4HpubtRYegh/FMZotMtjFjOynLjxiXblSWYo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/chris3ware
+
+==================================================================
