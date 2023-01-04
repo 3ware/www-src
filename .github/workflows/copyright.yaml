@@ -43,4 +43,3 @@ jobs:
              copyright year"
           commit_user_name: "3ware-release[bot]"
           commit_user_email: "3ware-release[bot]@users.noreply.github.com"
-          #commit_author: "36608309+chris3ware@users.noreply.github.com"
