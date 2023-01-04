@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+### [1.7.1](https://github.com/3ware/www-src/compare/v1.7.0...v1.7.1) (2023-01-04)
+
+
+### Bug Fixes
+
+* copyright workflow ([#27](https://github.com/3ware/www-src/issues/27)) ([08d4455](https://github.com/3ware/www-src/commit/08d44559d5ffb2d922d0fe9ee6b060b4fdaddd92))
+
 ## [1.7.0](https://github.com/3ware/www-src/compare/v1.6.0...v1.7.0) (2022-09-23)
 
 
