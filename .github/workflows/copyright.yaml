@@ -18,7 +18,7 @@ jobs:
       - run: echo "LAST_YEAR=$(date +%Y --date "1 year ago")" >> $GITHUB_ENV
       - name: Get Token
         id: get_workflow_token
-        uses: peter-murray/workflow-application-token-action@v1
+        uses: peter-murray/workflow-application-token-action@v2.1.0
         with:
           application_id: ${{ secrets.APPLICATION_ID }}
           application_private_key: ${{ secrets.APPLICATION_PRIVATE_KEY }}
@@ -43,4 +43,3 @@ jobs:
              copyright year"
           commit_user_name: "3ware-release[bot]"
           commit_user_email: "3ware-release[bot]@users.noreply.github.com"
-          commit_author: "36608309+chris3ware@users.noreply.github.com"
