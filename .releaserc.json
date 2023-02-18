@@ -23,7 +23,7 @@
             {
               "type": "chore",
               "scope": "deps",
-              "section": "Bug Fixes",
+              "section": "Chores",
               "hidden": false
             }
           ]
