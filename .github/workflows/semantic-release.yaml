@@ -10,5 +10,5 @@ on:
 
 jobs:
   semantic-release:
-    uses: 3ware/workflows/.github/workflows/semantic-release.yaml@v1.7.0
+    uses: 3ware/workflows/.github/workflows/semantic-release.yaml@v1.8.0
     secrets: inherit
