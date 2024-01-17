@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.7.2](https://github.com/3ware/www-src/compare/v1.7.1...v1.7.2) (2024-01-17)
+
+
+### Bug Fixes
+
+* Update GitHub App secrets to correct values ([#29](https://github.com/3ware/www-src/issues/29)) ([8f38532](https://github.com/3ware/www-src/commit/8f38532836c35af9469c87273c70e64a16e65732))
+
 ### [1.7.1](https://github.com/3ware/www-src/compare/v1.7.0...v1.7.1) (2023-01-04)
 
 
