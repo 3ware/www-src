@@ -20,7 +20,7 @@ A wealth of experience, utilising technology from industry leading vendors, to d
 
 ![AWS](img/awsLogo.png) ![Azure](img/azureLogo.png) ![Hashicorp](img/Hashicorp-Mark_onLight.png)
 
-![PaloAlto](img/paloLogo.png) ![Fortinet](img/fortinetLogo.png) 
+![PaloAlto](img/paloLogo.png) ![Fortinet](img/fortinetLogo.png)
 
 ![Cisco](img/ciscoLogo.png) ![Zscaler](img/zscalerLogo.png) ![F5](img/f5Logo.png)
 
@@ -28,8 +28,8 @@ And many more
 
 ### Automation
 
-Infrastructure As Code (IaC), CI/CD pipelines, automated testing and documentation. You can checkout some of our workflows and IaC projects on our GitHub page 
-[![3wareGitHub](img/GitHub_Invertocat_Dark.png)](https://github.com/3ware). 
+Infrastructure As Code (IaC), CI/CD pipelines, automated testing and documentation. You can checkout some of our workflows and IaC projects on our GitHub page
+[![3wareGitHub](img/GitHub_Invertocat_Dark.png)](https://github.com/3ware).
 
 ## Previous clients include
 
@@ -52,4 +52,3 @@ Business Hours: Monday - Friday: 09:00 - 17:00
 Saturday - Sunday: Closed
 
 {{< form-contact action="https://formspree.io/f/xnnaggkn" >}}
-
