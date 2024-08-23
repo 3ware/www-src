@@ -1,0 +1,24 @@
+on:
+  workflow_call: {}
+
+# Disable permissions for all available scopes
+permissions: {}
+
+jobs:
+  setup-and-run-hugo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Read .env
+        id: hugo-version
+        run: |
+          . ./.env
+          echo "HUGO_VERSION=${HUGO_VERSION}" >> "${GITHUB_OUTPUT}"
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@7db63f5e7f65f5c06a64fd56106389606f84a976 #v3.0.0
+        with:
+          hugo-version: ${{ steps.hugo-version.outputs.HUGO_VERSION }}
+          extended: true
+
+      - name: Build website
+        run: hugo --minify
