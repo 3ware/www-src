@@ -1,68 +1,30 @@
-# Github action to run hugo, generated website content, and push to blog-public repo
+name: Publish Website
 
-name: Publish Content
-
-# Controls when the action will run.
 on:
-  # Triggers the workflow when a new version is released
-  #release:
-  #  types: [published]
-  push:
-    branches:
-      - main
-    paths:
-      - "content/**"
-      - "resources/**"
-      - "static/**"
-      - "themes/**"
-      - "config.toml"
+  release:
+    types: [published]
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
-    inputs:
-      commit_message:
-        description: "Insert conventional commit message"
-        required: true
+# Disable permissions for all available scopes
+permissions: {}
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
+  publish-website:
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
+    timeout-minutes: 30
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.head_ref }}
+      cancel-in-progress: true
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - name: Git Checkout
-        uses: actions/checkout@v2
-        with:
-          submodules: true
+      - name: Checkout repository
+        uses: actions/checkout@3df4ab11eba7bda6032a0b82a6bb43b11571feac # v4.0.0
 
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
-        with:
-          hugo-version: "0.101.0"
-          extended: true
+      - name: Build website
+        uses: ./.github/workflows/hugo.yaml
 
-      - name: Setup Node
-        uses: actions/setup-node@v2
-        with:
-          node-version: "15.13"
-
-      - name: Cache dependencies
-        uses: actions/cache@v1
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-
-      - run: npm ci
-      - run: hugo
-
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Deploy website to www-public
+        uses: peaceiris/actions-gh-pages@a16b61f0780be556cf97931905d261429ee79342 #v4.0.0
         with:
           deploy_key: ${{ secrets.ACTION_DEPLOY_KEY }}
           external_repository: 3ware/www-public
@@ -72,5 +34,4 @@ jobs:
           user_name: 3ware-release[bot]
           user_email: 3ware-release[bot]@users.noreply.github.com
           publish_branch: main
-          full_commit_message: ${{ github.event.head_commit.message }}
-          #full_commit_message: ${{ inputs.commit_message }}
+          commit_message: ${{ github.event.tag_name }}
