@@ -8,6 +8,9 @@ jobs:
   setup-and-run-hugo:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@3df4ab11eba7bda6032a0b82a6bb43b11571feac # v4.0.0
+
       - name: Read .env
         id: hugo-version
         run: |
