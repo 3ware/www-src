@@ -13,7 +13,7 @@ module.exports = {
       [
         "commitlint",
         "delete-workflow-run",
-        "ci",
+        "lint-and-test",
         "pr-title",
         "publish",
         "release",
