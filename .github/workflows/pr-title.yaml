@@ -1,15 +1,14 @@
-# This file is managed by terraform and should be edited directly
-
 name: Validate PR title
 on:
   pull_request:
-    types:
-      - opened
-      - edited
-      - synchronize
+    types: [opened, edited, synchronize]
+
+# Disable permissions for all available scopes
+permissions: {}
 
 jobs:
-  conventional-pr-title:
+  validate-pr-title:
+    name: Validate PR title
     permissions:
-      pull-requests: read
-    uses: 3ware/workflows/.github/workflows/pr-title.yaml@v1.8.0
+      pull-requests: write
+    uses: 3ware/workflows/.github/workflows/pr-title.yaml@967c3673d8c3e538b47ad2c2b75a89268d990e61 # v2.6.0

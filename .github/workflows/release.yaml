@@ -1,0 +1,14 @@
+name: Release
+
+on:
+  push:
+    branches: [main]
+
+# Disable permissions for all available scopes
+permissions: {}
+
+jobs:
+  semantic-release:
+    name: Release
+    uses: 3ware/workflows/.github/workflows/release.yaml@fix-token-permissions
+    secrets: inherit

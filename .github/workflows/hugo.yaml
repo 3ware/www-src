@@ -1,0 +1,39 @@
+# Calling workflow job name should be: `name: test` to ensure a required status
+# check for 'Test' will match
+name: Test
+on:
+  workflow_call: {}
+
+# Disable permissions for all available scopes
+permissions: {}
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref }}
+  cancel-in-progress: true
+
+jobs:
+  setup-and-run-hugo:
+    name: Test
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@3df4ab11eba7bda6032a0b82a6bb43b11571feac # v4.0.0
+        with:
+          persist-credentials: true
+
+      - name: Read .env
+        id: hugo-version
+        run: |
+          . ./.env
+          echo "HUGO_VERSION=${HUGO_VERSION}" >> "${GITHUB_OUTPUT}"
+
+      - name: Setup Hugo
+        # TODO find correct tag so action doesn't fail with file not found error
+        uses: peaceiris/actions-hugo@v3.0.0
+        with:
+          hugo-version: ${{ steps.hugo-version.outputs.HUGO_VERSION }}
+          extended: true
+
+      - name: Build website
+        run: hugo --minify

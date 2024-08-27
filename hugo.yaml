@@ -1,0 +1,25 @@
+title: 3ware Ltd
+baseURL: https://www.3ware.co.uk/
+languageCode: en-gb
+theme: github.com/theNewDynamic/gohugo-theme-ananke
+resourceDir: resources
+
+DefaultContentLanguage: en
+googleAnalytics: ""
+enableRobotsTXT: true
+
+languages:
+  en:
+    weight: 1
+    contentDir: content/en/home
+
+params:
+  favicon: img/favicon.ico
+  site_logo: img/3wareLogo.jpg
+  ananke_socials:
+    - name: github
+      url: https://github.com/3ware
+    - name: LinkedIn
+      url: https://linkedin.com/company/3ware
+    - name: keybase
+      url: https://keybase.io/chris3ware
