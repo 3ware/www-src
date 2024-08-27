@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [3.0.1](https://github.com/3ware/www-src/compare/v3.0.0...v3.0.1) (2024-08-27)
+
+
+### Bug Fixes
+
+* **www:** LinkedIn social link ([#35](https://github.com/3ware/www-src/issues/35)) ([ff320f7](https://github.com/3ware/www-src/commit/ff320f737a9604bf817d17fbc983fd3bb407244e))
+
 ## [3.0.0](https://github.com/3ware/www-src/compare/v2.1.0...v3.0.0) (2024-08-27)
 
 
