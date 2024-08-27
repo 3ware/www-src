@@ -37,5 +37,5 @@ jobs:
     name: Test
     needs: [lint]
     permissions:
-      contents: read
+      contents: write
     uses: ./.github/workflows/hugo.yaml
