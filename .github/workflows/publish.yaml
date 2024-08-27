@@ -3,7 +3,6 @@ name: Publish Website
 on:
   release:
     types: [published]
-  workflow_dispatch: {}
 
 # Disable permissions for all available scopes
 permissions: {}
@@ -14,6 +13,7 @@ jobs:
     uses: 3ware/www-src/.github/workflows/hugo.yaml@2e5314429b97aecc4354ba42a5ba0fb0c287b1ec # v2.0.0
 
   publish-website:
+    name: Publish
     needs: [build-website]
     runs-on: ubuntu-latest
     concurrency:
@@ -21,9 +21,14 @@ jobs:
       cancel-in-progress: true
     timeout-minutes: 10
     steps:
+      - name: Download artifact
+        uses: actions/download-artifact@fa0a91b85d4f404e444e00e005971372dc801d16 # v4.1.8
+        with:
+          name: 3ware-website
+          path: ./public
+
       - name: Publish
-        # TODO: find correct tag so action doesn't fail with file not found error
-        uses: peaceiris/actions-gh-pages@v4.0.0
+        uses: peaceiris/actions-gh-pages@4f9cc6602d3f66b9c108549d475ec49e8ef4d45e # v4.0.0
         with:
           deploy_key: ${{ secrets.ACTION_DEPLOY_KEY }}
           external_repository: 3ware/www-public
