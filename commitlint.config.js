@@ -16,6 +16,7 @@ module.exports = {
         "lint-and-test",
         "pr-title",
         "publish",
+        "readme",
         "release",
         "hugo",
         "www",
