@@ -4,11 +4,11 @@ on:
   push:
     branches: [main]
 
-# Declare default permissions as read only.
-permissions: read-all
+# Disable permissions for all available scopes
+permissions: {}
 
 jobs:
   semantic-release:
     name: Release
-    uses: 3ware/workflows/.github/workflows/release.yaml@967c3673d8c3e538b47ad2c2b75a89268d990e61 # v2.6.0
+    uses: 3ware/workflows/.github/workflows/release.yaml@fix-token-permissions
     secrets: inherit
