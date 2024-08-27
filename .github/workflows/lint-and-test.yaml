@@ -36,4 +36,4 @@ jobs:
     # `name: Test` in hugo.yaml
     name: Test
     needs: [lint]
-    uses: 3ware/www-src/.github/workflows/hugo.yaml@2e5314429b97aecc4354ba42a5ba0fb0c287b1ec # v2.0.0
+    uses: 3ware/www-src/.github/workflows/hugo.yaml@ref-hugo-publish-workflow
