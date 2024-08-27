@@ -35,4 +35,4 @@ jobs:
     needs: [lint]
     permissions:
       contents: read
-    uses: 3ware/workflows/.github/workflows/hugo.yaml@feat-theme-update
+    uses: ./.github/workflows/hugo.yaml
