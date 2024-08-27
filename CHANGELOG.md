@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## [3.0.0](https://github.com/3ware/www-src/compare/v2.1.0...v3.0.0) (2024-08-27)
+
+
+### ⚠ BREAKING CHANGES
+
+* **publish:** Publish updated website (#34)
+
+### Features
+
+* **publish:** Publish updated website ([#34](https://github.com/3ware/www-src/issues/34)) ([4641872](https://github.com/3ware/www-src/commit/46418729da3e18e5e5dfac9795538ba8fe360907))
+
 ## [2.1.0](https://github.com/3ware/www-src/compare/v2.0.1...v2.1.0) (2024-08-27)
 
 
