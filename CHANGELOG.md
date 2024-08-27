@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.0.0](https://github.com/3ware/www-src/compare/v1.7.2...v2.0.0) (2024-08-27)
+
+
+### ⚠ BREAKING CHANGES
+
+* **www:** Theme and workflow updates (#30)
+
+### Features
+
+* **www:** Theme and workflow updates ([#30](https://github.com/3ware/www-src/issues/30)) ([6292f37](https://github.com/3ware/www-src/commit/6292f37dd7b873074213b083bbacb9665393d81f))
+
 ## [1.7.2](https://github.com/3ware/www-src/compare/v1.7.1...v1.7.2) (2024-01-17)
 
 
