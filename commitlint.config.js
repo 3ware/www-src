@@ -11,6 +11,7 @@ module.exports = {
       1,
       "always",
       [
+        "codeowners",
         "commitlint",
         "delete-workflow-run",
         "lint-and-test",
