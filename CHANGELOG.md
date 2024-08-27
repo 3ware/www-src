@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.1.0](https://github.com/3ware/www-src/compare/v2.0.1...v2.1.0) (2024-08-27)
+
+
+### Features
+
+* **publish:** Add artifact steps to publish workflow ([#33](https://github.com/3ware/www-src/issues/33)) ([92f6a84](https://github.com/3ware/www-src/commit/92f6a8455c7aef8dd906e7c0f5259ee21dcd80c9))
+
 ## [2.0.1](https://github.com/3ware/www-src/compare/v2.0.0...v2.0.1) (2024-08-27)
 
 
