@@ -3,20 +3,21 @@
 name: Test
 on:
   workflow_call: {}
+  pull_request:
+    types: [opened, synchronize]
 
 # Disable permissions for all available scopes
 permissions: {}
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref }}
+  cancel-in-progress: true
+
 jobs:
   setup-and-run-hugo:
-    name:
+    name: Test
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     timeout-minutes: 20
-    concurrency:
-      group: ${{ github.workflow }}-${{ github.head_ref }}
-      cancel-in-progress: true
     steps:
       - name: Checkout repository
         uses: actions/checkout@3df4ab11eba7bda6032a0b82a6bb43b11571feac # v4.0.0
@@ -30,7 +31,7 @@ jobs:
           echo "HUGO_VERSION=${HUGO_VERSION}" >> "${GITHUB_OUTPUT}"
 
       - name: Setup Hugo
-        uses: peaceiris/actions-hugo@7db63f5e7f65f5c06a64fd56106389606f84a976 #v3.0.0
+        uses: peaceiris/actions-hugo@v3.0.0
         with:
           hugo-version: ${{ steps.hugo-version.outputs.HUGO_VERSION }}
           extended: true
