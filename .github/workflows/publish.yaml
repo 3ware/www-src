@@ -10,7 +10,7 @@ permissions: {}
 jobs:
   build-website:
     name: Build
-    uses: 3ware/www-src/.github/workflows/hugo.yaml@2e5314429b97aecc4354ba42a5ba0fb0c287b1ec # v2.0.0
+    uses: 3ware/www-src/.github/workflows/hugo.yaml@92f6a8455c7aef8dd906e7c0f5259ee21dcd80c9 #v2.1.0
 
   publish-website:
     name: Publish
