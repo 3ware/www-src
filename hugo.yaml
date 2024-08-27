@@ -19,7 +19,7 @@ params:
   ananke_socials:
     - name: github
       url: https://github.com/3ware
-    - name: LinkedIn
+    - name: linkedin
       url: https://linkedin.com/company/3ware
     - name: keybase
       url: https://keybase.io/chris3ware
