@@ -3,27 +3,25 @@ name: Publish Website
 on:
   release:
     types: [published]
+  workflow_dispatch: {}
 
 # Disable permissions for all available scopes
 permissions: {}
 
 jobs:
+  build-website:
+    name: Build
+    uses: 3ware/www-src/.github/workflows/hugo.yaml@2e5314429b97aecc4354ba42a5ba0fb0c287b1ec # v2.0.0
+
   publish-website:
-    permissions:
-      contents: write
+    needs: [build-website]
     runs-on: ubuntu-latest
-    timeout-minutes: 30
     concurrency:
       group: ${{ github.workflow }}-${{ github.head_ref }}
       cancel-in-progress: true
+    timeout-minutes: 10
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@3df4ab11eba7bda6032a0b82a6bb43b11571feac # v4.0.0
-
-      - name: Build website
-        uses: ./.github/workflows/hugo.yaml
-
-      - name: Deploy website to www-public
+      - name: Publish
         uses: peaceiris/actions-gh-pages@a16b61f0780be556cf97931905d261429ee79342 #v4.0.0
         with:
           deploy_key: ${{ secrets.ACTION_DEPLOY_KEY }}
