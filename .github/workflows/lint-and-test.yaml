@@ -30,11 +30,10 @@ jobs:
       - name: Dependency Review
         uses: actions/dependency-review-action@4901385134134e04cec5fbe5ddfe3b2c5bd5d976 # v4.0.0
 
-
-  # test:
-  #   # Job name should be the same as the called workflow name for required status
-  #   # check to match. In this case job level `name: Test` matches workflow level
-  #   # `name: test` in hugo.yaml
-  #   name: Test
-  #   needs: [lint]
-  #   uses: ./.github/workflows/hugo.yaml
+  test:
+    # Job name should be the same as the called workflow name for required status
+    # check to match. In this case job level `name: Test` matches workflow level
+    # `name: test` in hugo.yaml
+    name: Test
+    needs: [lint]
+    uses: ./.github/workflows/hugo.yaml
