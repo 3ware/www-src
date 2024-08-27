@@ -22,7 +22,8 @@ jobs:
     timeout-minutes: 10
     steps:
       - name: Publish
-        uses: peaceiris/actions-gh-pages@a16b61f0780be556cf97931905d261429ee79342 #v4.0.0
+        # TODO: find correct tag so action doesn't fail with file not found error
+        uses: peaceiris/actions-gh-pages@v4.0.0
         with:
           deploy_key: ${{ secrets.ACTION_DEPLOY_KEY }}
           external_repository: 3ware/www-public
