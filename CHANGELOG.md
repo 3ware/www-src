@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.0.1](https://github.com/3ware/www-src/compare/v2.0.0...v2.0.1) (2024-08-27)
+
+
+### Bug Fixes
+
+* **pubish:** Workflow failed to run ([#32](https://github.com/3ware/www-src/issues/32)) ([13120e4](https://github.com/3ware/www-src/commit/13120e4a7e9072a7b47c8a2dc6be63b929fe563e))
+
 ## [2.0.0](https://github.com/3ware/www-src/compare/v1.7.2...v2.0.0) (2024-08-27)
 
 
