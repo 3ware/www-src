@@ -49,4 +49,4 @@ For more information about our services and how we can help with delivering your
 Business Hours: Monday - Friday: 09:00 - 17:00  
 Saturday - Sunday: Closed
 
-{{<form-contact action="https://formspree.io/f/xnnaggkn" method="POST">}}
+{{<form-contact action="https://formspree.io/f/xnnaggkn" method="POST">}}<!-- trunk-ignore(markdownlint/MD033) -->
