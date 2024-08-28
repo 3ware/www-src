@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file.
 
+## [3.0.2](https://github.com/3ware/www-src/compare/v3.0.1...v3.0.2) (2024-08-28)
+
+
+### Bug Fixes
+
+* **www:** Add post method to contact form ([#37](https://github.com/3ware/www-src/issues/37)) ([2f968c8](https://github.com/3ware/www-src/commit/2f968c85cda9e3719861c6c1431fdb3e504922ec))
+
+## [3.0.1](https://github.com/3ware/www-src/compare/v3.0.0...v3.0.1) (2024-08-27)
+
+
+### Bug Fixes
+
+* **www:** LinkedIn social link ([#35](https://github.com/3ware/www-src/issues/35)) ([ff320f7](https://github.com/3ware/www-src/commit/ff320f737a9604bf817d17fbc983fd3bb407244e))
+
 ## [3.0.0](https://github.com/3ware/www-src/compare/v2.1.0...v3.0.0) (2024-08-27)
 
 
