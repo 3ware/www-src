@@ -1,6 +1,6 @@
 # Calling workflow job name should be: `name: test` to ensure a required status
 # check for 'Test' will match
-name: Test
+name: Build
 on:
   workflow_call: {}
 
