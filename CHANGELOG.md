@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [3.1.0](https://github.com/3ware/www-src/compare/v3.0.2...v3.1.0) (2024-09-12)
+
+
+### Features
+
+* **www:** Update contact form ([#39](https://github.com/3ware/www-src/issues/39)) ([53635ad](https://github.com/3ware/www-src/commit/53635ad23ba189b4245c8f16a5f1aefaa76e85cc))
+
 ## [3.0.2](https://github.com/3ware/www-src/compare/v3.0.1...v3.0.2) (2024-08-28)
 
 
