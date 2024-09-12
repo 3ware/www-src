@@ -14,7 +14,7 @@ module.exports = {
         "codeowners",
         "commitlint",
         "delete-workflow-run",
-        "lint-and-test",
+        "test-and-build",
         "pr-title",
         "publish",
         "readme",

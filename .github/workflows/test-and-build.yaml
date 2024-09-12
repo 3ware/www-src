@@ -1,4 +1,4 @@
-name: Lint and Test
+name: Test Build
 on:
   pull_request:
     types: [opened, synchronize]
@@ -7,8 +7,8 @@ on:
 permissions: {}
 
 jobs:
-  lint:
-    name: Lint
+  test:
+    name: Test
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -24,16 +24,13 @@ jobs:
         with:
           persist-credentials: true # lint fails to authenticate when false
 
-      - name: Lint with trunk
-        uses: trunk-io/trunk-action@da67635060feab46c164bc130690e61864a5d13b # v1.1.13
-
       - name: Dependency Review
         uses: actions/dependency-review-action@4901385134134e04cec5fbe5ddfe3b2c5bd5d976 # v4.0.0
 
-  test:
+  build:
     # Job name should be the same as the called workflow name for required status
-    # check to match. In this case job level `name: Test` matches workflow level
-    # `name: Test` in hugo.yaml
-    name: Test
-    needs: [lint]
+    # check to match. In this case job level `name: Build` matches workflow level
+    # `name: Build` in hugo.yaml
+    name: Build
+    needs: [test]
     uses: 3ware/www-src/.github/workflows/hugo.yaml@92f6a8455c7aef8dd906e7c0f5259ee21dcd80c9 #v2.1.0
