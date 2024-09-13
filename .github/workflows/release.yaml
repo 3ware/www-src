@@ -10,5 +10,5 @@ permissions: {}
 jobs:
   semantic-release:
     name: Release
-    uses: 3ware/workflows/.github/workflows/release.yaml@b8544975f6b063c29ac6a90a487a6fc8cc324aff # v3.0.0
+    uses: 3ware/workflows/.github/workflows/release.yaml@7880d6b986d1d689f5d219e901b863f1378fea9c # v4.4.0
     secrets: inherit
