@@ -1,6 +1,6 @@
 # 3ware Ltd Website
 
-[![semantic-release: conventionalcommits](https://img.shields.io/badge/semantic--release-conventionalcommits-blue?logo=semantic-release)](https://github.com/semantic-release/semantic-release) [![GitHub release](https://img.shields.io/github/release/3ware/www-src?include_prereleases=&sort=semver&color=yellow)](https://github.com/3ware/www-src/releases/) [![issues - workflows](https://img.shields.io/github/issues/3ware/www-src)](https://github.com/3ware/www-src/issues) [![CI](https://img.shields.io/github/actions/workflow/status/3ware/www-src/lint-and-test.yaml?label=CI&logo=githubactions&logoColor=white)](https://github.com/3ware/www-src/actions/workflows/lint-and-test.yaml)
+[![semantic-release: conventionalcommits](https://img.shields.io/badge/semantic--release-conventionalcommits-blue?logo=semantic-release)](https://github.com/semantic-release/semantic-release) [![GitHub release](https://img.shields.io/github/release/3ware/www-src?include_prereleases=&sort=semver&color=yellow)](https://github.com/3ware/www-src/releases/) [![issues - workflows](https://img.shields.io/github/issues/3ware/www-src)](https://github.com/3ware/www-src/issues) [![CI](https://img.shields.io/github/actions/workflow/status/3ware/www-src/wait-for-checks.yaml?label=CI&logo=githubactions&logoColor=white)](https://github.com/3ware/www-src/actions/workflows/wait-for-checks.yaml)
 
 This repository contains the code necessary to create and deploy the 3ware Ltd company website.
 

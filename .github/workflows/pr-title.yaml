@@ -11,4 +11,4 @@ jobs:
     name: Validate PR title
     permissions:
       pull-requests: write
-    uses: 3ware/workflows/.github/workflows/pr-title.yaml@967c3673d8c3e538b47ad2c2b75a89268d990e61 # v2.6.0
+    uses: 3ware/workflows/.github/workflows/pr-title.yaml@7880d6b986d1d689f5d219e901b863f1378fea9c # v4.4.0
