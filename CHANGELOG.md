@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [3.1.1](https://github.com/3ware/www-src/compare/v3.1.0...v3.1.1) (2025-03-04)
+
+
+### Dependencies
+
+* **deps:** Update repository files ([#41](https://github.com/3ware/www-src/issues/41)) ([1bf2226](https://github.com/3ware/www-src/commit/1bf2226232fde84c8c4b0f6698d12b5ad880678d))
+
 ## [3.1.0](https://github.com/3ware/www-src/compare/v3.0.2...v3.1.0) (2024-09-12)
 
 
