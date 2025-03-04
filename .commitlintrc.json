@@ -1,5 +1,5 @@
-module.exports = {
-  rules: {
+{
+  "rules": {
     "body-leading-blank": [1, "always"],
     "body-max-line-length": [2, "always", 72],
     "footer-leading-blank": [1, "always"],
@@ -8,24 +8,22 @@ module.exports = {
     "scope-case": [2, "always", "lower-case"],
     "scope-empty": [1, "never"],
     "scope-enum": [
-      1,
+      2,
       "always",
       [
         "checks",
-        "codeowners",
         "commitlint",
-        "delete-run",
         "deps",
-        "test-and-build",
-        "pr-title",
-        "publish",
-        "readme",
-        "release",
         "hugo",
-        "www",
-      ],
+        "pr-check",
+        "publish",
+        "release",
+        "renovate",
+        "test-and-build",
+        "trunk",
+        "www"
+      ]
     ],
-    //"signed-off-by": [1, "always", "Signed-off-by:"],
     "subject-case": [1, "always", "sentence-case"],
     "subject-empty": [2, "never"],
     "subject-full-stop": [2, "never", "."],
@@ -34,19 +32,7 @@ module.exports = {
     "type-enum": [
       2,
       "always",
-      [
-        "build",
-        "chore",
-        "ci",
-        "docs",
-        "feat",
-        "fix",
-        "perf",
-        "refactor",
-        "revert",
-        "style",
-        "test",
-      ],
-    ],
-  },
-};
+      ["chore", "ci", "docs", "feat", "fix", "refactor"]
+    ]
+  }
+}
