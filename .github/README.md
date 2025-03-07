@@ -1,6 +1,6 @@
 # 3ware Ltd Website
 
-[![semantic-release: conventionalcommits](https://img.shields.io/badge/semantic--release-conventionalcommits-blue?logo=semantic-release)](https://github.com/semantic-release/semantic-release) [![GitHub release](https://img.shields.io/github/release/3ware/www-src?include_prereleases=&sort=semver&color=yellow)](https://github.com/3ware/www-src/releases/) [![issues - workflows](https://img.shields.io/github/issues/3ware/www-src)](https://github.com/3ware/www-src/issues) [![CI](https://github.com/3ware/www-src/actions/workflows/publish.yaml/badge.svg)](https://github.com/3ware/www-src/actions/workflows/publish.yaml)
+[![semantic-release: conventionalcommits](https://img.shields.io/badge/semantic--release-conventionalcommits-blue?logo=semantic-release)](https://github.com/semantic-release/semantic-release) [![GitHub release](https://img.shields.io/github/release/3ware/www-src?include_prereleases=&sort=semver&color=yellow)](https://github.com/3ware/www-src/releases/) [![issues - workflows](https://img.shields.io/github/issues/3ware/www-src)](https://github.com/3ware/www-src/issues) [![CI](https://img.shields.io/github/actions/workflow/status/3ware/www-src/publish.yaml?label=CI&logo=githubactions&logoColor=white)](https://github.com/3ware/www-src/actions/workflows/publish.yaml)
 
 This repository contains the code necessary to create and deploy the 3ware Ltd company website.
 
