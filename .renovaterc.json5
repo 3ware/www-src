@@ -3,16 +3,8 @@
   "commitMessageExtra": "",
   "commitMessageLowerCase": "never",
   "extends": [
+    "helpers:pinGitHubActionDigests",
     "security:only-security-updates"
-  ],
-  "packageRules": [
-    {
-      // Major updates must be approved on the dependency dashboard
-      "matchUpdateTypes": [
-        "major"
-      ],
-      "dependencyDashboardApproval": true
-    }
   ],
   "vulnerabilityAlerts": {
     "addLabels": [
