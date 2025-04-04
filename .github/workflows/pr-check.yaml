@@ -12,12 +12,12 @@ jobs:
     permissions:
       contents: read
       pull-requests: write
-    uses: 3ware/workflows/.github/workflows/pr-title.yaml@61d14ca4e861fc9c11acacc7d80a10a78775a4e3 # 4.11.0
+    uses: 3ware/workflows/.github/workflows/pr-title.yaml@c68b0d5cfaa5c31b21ae08682d9c4f9e8a261d32 # 4.19.1
 
   enforce-all-checks:
     name: Checks
     needs: [validate-pr-title]
     permissions:
       checks: read
-    uses: 3ware/workflows/.github/workflows/wait-for-checks.yaml@37f05222a05a0d46fa5f97a681c03fcd2b9acf5c # 4.9.0
+    uses: 3ware/workflows/.github/workflows/wait-for-checks.yaml@c68b0d5cfaa5c31b21ae08682d9c4f9e8a261d32 # 4.19.1
     secrets: inherit
