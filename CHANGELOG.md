@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [3.2.0](https://github.com/3ware/www-src/compare/v3.1.1...v3.2.0) (2026-09-06)
+
+
+### Features
+
+* **www:** Update previous experience ([#49](https://github.com/3ware/www-src/issues/49)) ([6434947](https://github.com/3ware/www-src/commit/64349475c3133b76ab424d2057cf79ae2aea243a))
+
 ## [3.1.1](https://github.com/3ware/www-src/compare/v3.1.0...v3.1.1) (2025-03-04)
 
 
