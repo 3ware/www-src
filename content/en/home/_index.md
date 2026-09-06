@@ -36,6 +36,8 @@ Sky Betting & Gaming
 Vodafone Cloud & Hosting  
 Department for Work and Pensions  
 Cybernetica Solutions
+EDClass Ltd
+Forge IT
 
 ## Industry accreditations
 
