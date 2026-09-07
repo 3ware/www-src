@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [3.2.1](https://github.com/3ware/www-src/compare/v3.2.0...v3.2.1) (2026-09-07)
+
+
+### Bug Fixes
+
+* **www:** Update client spacing ([#50](https://github.com/3ware/www-src/issues/50)) ([dfe25f1](https://github.com/3ware/www-src/commit/dfe25f1b569049d62fb0c91fae09349987d52d38))
+
 ## [3.2.0](https://github.com/3ware/www-src/compare/v3.1.1...v3.2.0) (2026-09-06)
 
 
