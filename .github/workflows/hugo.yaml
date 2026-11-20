@@ -29,7 +29,7 @@ jobs:
 
       - name: Setup Hugo
         # cspell:disable-next-line
-        uses: peaceiris/actions-hugo@v3.0.0
+        uses: peaceiris/actions-hugo@v3.2.1
         with:
           hugo-version: ${{ steps.hugo-version.outputs.HUGO_VERSION }}
           extended: true
@@ -38,7 +38,7 @@ jobs:
         run: hugo --minify
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v4.3.6
+        uses: actions/upload-artifact@v4.6.2
         with:
           name: 3ware-website
           path: ./public
