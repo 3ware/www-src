@@ -65,7 +65,9 @@ jobs:
           persist-credentials: false
 
       - name: Auto approve
-        # cspell: disable-next-line
+        # Workaround for auto-approve-action#42: the action exits 1 when it declines to approve
+        if: ${{ !contains(github.event.pull_request.labels.*.name, 'review-required') }}
+        # cspell:disable-next-line
         uses: lekman/auto-approve-action@v1
         with:
           allowed-authors: 3ware[bot], renovate[bot]
