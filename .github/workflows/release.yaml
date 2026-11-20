@@ -4,11 +4,30 @@ on:
   push:
     branches: [main]
 
-# Disable permissions for all available scopes
 permissions: {}
 
+concurrency:
+  group: release-please
+  cancel-in-progress: false
+
 jobs:
-  semantic-release:
-    name: Release
-    uses: 3ware/workflows/.github/workflows/release.yaml@7880d6b986d1d689f5d219e901b863f1378fea9c # v4.4.0
-    secrets: inherit
+  release:
+    name: Release Please
+    runs-on: ubuntu-slim
+    steps:
+      - name: Get GitHub App token
+        id: app-token
+        uses: actions/create-github-app-token@v3.3.0
+        with:
+          client-id: ${{ secrets.THREEWARE_RELEASE_APPLICATION_ID }}
+          private-key: ${{ secrets.THREEWARE_RELEASE_APPLICATION_PRIVATE_KEY }}
+          permission-contents: write # Required to update release-related files
+          permission-issues: write # See: https://github.com/googleapis/release-please-action/tree/v5.0.0/#workflow-permissions
+          permission-pull-requests: write # Required to create and update pull requests
+
+      - name: Run Release Please
+        uses: googleapis/release-please-action@v5.0.0
+        with:
+          config-file: .github/release-please-config.json
+          manifest-file: .github/release-please-manifest.json
+          token: ${{ steps.app-token.outputs.token }}

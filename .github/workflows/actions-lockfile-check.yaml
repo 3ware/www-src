@@ -1,0 +1,74 @@
+name: Actions Lockfile Check
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize]
+    branches: [main]
+    paths:
+      - .github/workflows/**
+      - .github/gh-actions-lock.version
+      - "**/action.yml"
+      - "**/action.yaml"
+
+permissions: {}
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    name: Verify Lockfile
+    permissions:
+      contents: read
+    runs-on: ubuntu-slim
+    timeout-minutes: 10
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v7.0.1
+        with:
+          persist-credentials: false
+      - run: gh extension install github/gh-actions-lock --pin "$(<.github/gh-actions-lock.version)"
+      - run: gh actions-lock --verify
+
+  update:
+    needs: verify
+    # Override default 'success' status check with 'failure' and run only if the verify job failed
+    # https://docs.github.com/en/actions/reference/workflows-and-actions/expressions#status-check-functions
+    if: ${{ failure() && needs.verify.result == 'failure' }}
+    name: Update Lockfile
+    permissions:
+      contents: read # Required to checkout the repository
+    runs-on: ubuntu-latest # Uses Docker container; cannot use ubuntu-slim
+    timeout-minutes: 10
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v7.0.1
+        with:
+          persist-credentials: false
+      - run: gh extension install github/gh-actions-lock --pin "$(<.github/gh-actions-lock.version)"
+      - run: gh actions-lock
+
+      # Workflow triggered by GITHUB_TOKEN require manual approval
+      # Use threeware-bot application token for lockfile commits
+      - name: Get GitHub App token
+        id: app-token
+        uses: actions/create-github-app-token@v3.3.0
+        with:
+          client-id: ${{ secrets.THREEWARE_RELEASE_APPLICATION_ID }}
+          private-key: ${{ secrets.THREEWARE_RELEASE_APPLICATION_PRIVATE_KEY }}
+          permission-contents: write # Required to commit updates to the lockfile
+          permission-workflows: write # Required to update workflow files (actions.lock) is in the workflows directory
+
+      - name: Commit Lockfile Updates
+        # cspell:disable-next-line
+        uses: planetscale/ghcommit-action@v0.2.22
+        env:
+          GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
+        with:
+          repo: ${{ github.repository }}
+          branch: ${{ github.head_ref }}
+          file_pattern: .github/workflows/actions.lock
+          commit_message: "ci(github-actions): Update lockfile"

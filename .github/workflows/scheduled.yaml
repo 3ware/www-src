@@ -1,0 +1,31 @@
+name: Scheduled
+on:
+  schedule:
+    - cron: 0 0 1 * *
+  workflow_dispatch: {}
+
+# Disable permissions for all available scopes
+permissions: {}
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.repository }}
+  cancel-in-progress: true
+
+jobs:
+  delete-workflow-run:
+    name: Delete workflow runs
+    permissions:
+      actions: write # Required to delete workflow runs
+      contents: read
+    runs-on: ubuntu-slim
+    timeout-minutes: 30
+    steps:
+      - name: Delete workflow runs
+        # cspell:disable-next-line
+        uses: Mattraks/delete-workflow-runs@v2.1.0
+        with:
+          token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          retain_days: 30
+          keep_minimum_runs: 6
+          check_pullrequest_exist: true

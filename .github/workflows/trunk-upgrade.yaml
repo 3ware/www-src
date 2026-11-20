@@ -1,0 +1,46 @@
+name: Trunk Upgrade
+
+on:
+  schedule:
+    # On the first day of every month @ 8am
+    - cron: 0 8 1 * *
+  workflow_dispatch: {}
+
+permissions: {}
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
+  cancel-in-progress: true
+
+jobs:
+  trunk-upgrade:
+    name: Trunk Upgrade
+    permissions:
+      contents: read # Required by checkout step
+    runs-on: ubuntu-slim
+    steps:
+      # Uses github.token for authentication
+      - name: Checkout
+        uses: actions/checkout@v7.0.1
+        with:
+          persist-credentials: false
+
+      # Use threeware-bot application token for trunk. This ensure workflows can
+      # run on pull requests that trunk creates.
+      - name: Get GitHub App token
+        id: app-token
+        uses: actions/create-github-app-token@v3.3.0
+        with:
+          client-id: ${{ secrets.THREEWARE_RELEASE_APPLICATION_ID }}
+          private-key: ${{ secrets.THREEWARE_RELEASE_APPLICATION_PRIVATE_KEY }}
+          permission-contents: write # Required to update trunk-related files
+          permission-pull-requests: write # Required to create and update pull requests
+
+      - name: Trunk Upgrade
+        uses: trunk-io/trunk-action/upgrade@v2.0.0
+        with:
+          github-token: ${{ steps.app-token.outputs.token }}
+          labels: auto-merge,trunk
+          lowercase-title: true
+          prefix: "ci(trunk): "
+          sign-commits: true

@@ -1,0 +1,9 @@
+paths:
+  .github/workflows/**/*.{yml,yaml}:
+    ignore:
+      # See: https://github.com/EDClassLtd/edc-workflows/issues/20
+      # actionlint does not support recommended self repository syntax: `uses: $/.github/workflows/reusable-build-push.yaml`
+      # See: https://github.com/rhysd/actionlint/issues/711
+      # Active fork does: https://github.com/kjanat/actionlint/blob/master/docs/checks.md#action-format-in-uses
+      # PR to add fork to trunk: https://github.com/trunk-io/plugins/pull/1181
+      - reusable workflow call

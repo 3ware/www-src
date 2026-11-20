@@ -1,0 +1,17 @@
+{
+  "editor.defaultFormatter": "trunk.io",
+  "json.schemaDownload.trustedDomains": {
+    "https://docs.renovatebot.com": true,
+    "https://raw.githubusercontent.com/googleapis/release-please/": true,
+    "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json": true
+  },
+  "trunk.addToolsToPath": true,
+  "yaml.disableSchemaDetection": [
+    "**/.github/workflows/*.yml",
+    "**/.github/workflows/*.yaml"
+  ],
+  "yaml.schemaStore.enable": true,
+  "yaml.schemas": {
+    "https://static.trunk.io/pub/trunk-yaml-schema.json": ".trunk/trunk.yaml"
+  }
+}

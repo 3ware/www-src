@@ -1,0 +1,4 @@
+rules:
+  # Workflows do not need pinning to SHAs due to the presence of a workflow dependency lockfile
+  unpinned-uses:
+    disable: true
