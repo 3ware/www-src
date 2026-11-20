@@ -12,11 +12,12 @@ concurrency:
 jobs:
   setup-and-run-hugo:
     name: Build
+    # go not available on ubuntu-slim
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 15
     steps:
       - name: Checkout repository
-        uses: actions/checkout@3df4ab11eba7bda6032a0b82a6bb43b11571feac # v4.0.0
+        uses: actions/checkout@v7.0.1
         with:
           persist-credentials: true
 
@@ -27,7 +28,8 @@ jobs:
           echo "HUGO_VERSION=${HUGO_VERSION}" >> "${GITHUB_OUTPUT}"
 
       - name: Setup Hugo
-        uses: peaceiris/actions-hugo@75d2e84710de30f6ff7268e08f310b60ef14033f # v3.0.0
+        # cspell:disable-next-line
+        uses: peaceiris/actions-hugo@v3.0.0
         with:
           hugo-version: ${{ steps.hugo-version.outputs.HUGO_VERSION }}
           extended: true
@@ -36,7 +38,7 @@ jobs:
         run: hugo --minify
 
       - name: Upload artifact
-        uses: actions/upload-artifact@834a144ee995460fba8ed112a2fc961b36a5ec5a # v.4.3.6
+        uses: actions/upload-artifact@v4.3.6
         with:
           name: 3ware-website
           path: ./public

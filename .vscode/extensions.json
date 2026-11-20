@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    // cspell:disable-next-line
+    "FanaticPythoner.better-todo-tree",
+    "github.vscode-github-actions",
+    // cspell:disable-next-line
+    "joshbolduc.commitlint",
+    "streetsidesoftware.code-spell-checker",
+    "trunk.io",
+    "redhat.vscode-yaml"
+  ]
+}

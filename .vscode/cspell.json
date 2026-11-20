@@ -1,0 +1,30 @@
+{
+  "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
+  "version": "0.2",
+  "language": "en-GB",
+  "suggestionsTimeout": 5000,
+  "ignorePaths": ["CHANGELOG.md", "static/keybase.txt"],
+  "words": [
+    "actionlock",
+    "ananke",
+    "commitlint",
+    "Cybernetica",
+    "docstrings",
+    "gohugo",
+    "jsonvet",
+    "keybase",
+    "linters",
+    "oxipng",
+    "pinact",
+    "pipefail",
+    "pullrequest",
+    "sarif",
+    "scriptdir",
+    "shellcheck",
+    "terrateam",
+    "terrateamio",
+    "tflint",
+    "threeware",
+    "zizmor"
+  ]
+}

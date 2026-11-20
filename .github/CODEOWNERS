@@ -1,1 +1,16 @@
-* @3ware/repo-maintainers
+# Require review from repository maintainer team
+/.editorconfig @3ware/repo-maintainers
+/.env @3ware/repo-maintainers
+/.github/PULL_REQUEST_TEMPLATE.md @3ware/repo-maintainers
+/.github/README.md @3ware/repo-maintainers
+/.github/release-please-config.json @3ware/repo-maintainers
+/.github/release-please-manifest.json @3ware/repo-maintainers
+/.github/renovate.json @3ware/repo-maintainers
+/.github/zizmor.yaml @3ware/repo-maintainers
+/.trunk/configs/** @3ware/repo-maintainers
+/.trunk/scripts/** @3ware/repo-maintainers
+/.vscode/** @3ware/repo-maintainers
+/CHANGELOG.md @3ware/repo-maintainers
+/content/** @3ware/repo-maintainers
+/hugo.yaml @3ware/repo-maintainers
+/static/** @3ware/repo-maintainers
