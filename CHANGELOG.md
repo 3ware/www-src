@@ -2,6 +2,52 @@
 
 All notable changes to this project will be documented in this file.
 
+## 1.0.0 (2026-11-20)
+
+
+### ⚠ BREAKING CHANGES
+
+* **publish:** Publish updated website ([#34](https://github.com/3ware/www-src/issues/34))
+* **www:** Theme and workflow updates ([#30](https://github.com/3ware/www-src/issues/30))
+
+### Features
+
+* **publish:** Add artifact steps to publish workflow ([#33](https://github.com/3ware/www-src/issues/33)) ([92f6a84](https://github.com/3ware/www-src/commit/92f6a8455c7aef8dd906e7c0f5259ee21dcd80c9))
+* **publish:** Publish updated website ([#34](https://github.com/3ware/www-src/issues/34)) ([4641872](https://github.com/3ware/www-src/commit/46418729da3e18e5e5dfac9795538ba8fe360907))
+* **publish:** Remove test page ([#6](https://github.com/3ware/www-src/issues/6)) ([2551680](https://github.com/3ware/www-src/commit/25516809811e1cef026ba66d9d0b483d39477720))
+* **www:** Add keybase verification txt file ([#24](https://github.com/3ware/www-src/issues/24)) ([9d3147e](https://github.com/3ware/www-src/commit/9d3147ef4fe5b54a5ffffda40770b6cfba9d458b))
+* **www:** Theme and workflow updates ([#30](https://github.com/3ware/www-src/issues/30)) ([6292f37](https://github.com/3ware/www-src/commit/6292f37dd7b873074213b083bbacb9665393d81f))
+* **www:** Update contact form ([#39](https://github.com/3ware/www-src/issues/39)) ([53635ad](https://github.com/3ware/www-src/commit/53635ad23ba189b4245c8f16a5f1aefaa76e85cc))
+* **www:** Update previous experience ([#49](https://github.com/3ware/www-src/issues/49)) ([6434947](https://github.com/3ware/www-src/commit/64349475c3133b76ab424d2057cf79ae2aea243a))
+
+
+### Bug Fixes
+
+* copyright workflow ([#27](https://github.com/3ware/www-src/issues/27)) ([08d4455](https://github.com/3ware/www-src/commit/08d44559d5ffb2d922d0fe9ee6b060b4fdaddd92))
+* correct typo in ci file ([0d28a27](https://github.com/3ware/www-src/commit/0d28a27c896f582189d627ee884bdb3525b0f9fa))
+* **pubish:** Workflow failed to run ([#32](https://github.com/3ware/www-src/issues/32)) ([13120e4](https://github.com/3ware/www-src/commit/13120e4a7e9072a7b47c8a2dc6be63b929fe563e))
+* **release:** Use full commit message in publish workflow ([#5](https://github.com/3ware/www-src/issues/5)) ([b5b272f](https://github.com/3ware/www-src/commit/b5b272f3a02a1a1d6989021a9ecc39dab04e93d6))
+* Update GitHub App secrets to correct values ([#29](https://github.com/3ware/www-src/issues/29)) ([8f38532](https://github.com/3ware/www-src/commit/8f38532836c35af9469c87273c70e64a16e65732))
+* **www:** Add post method to contact form ([#37](https://github.com/3ware/www-src/issues/37)) ([2f968c8](https://github.com/3ware/www-src/commit/2f968c85cda9e3719861c6c1431fdb3e504922ec))
+* **www:** LinkedIn social link ([#35](https://github.com/3ware/www-src/issues/35)) ([ff320f7](https://github.com/3ware/www-src/commit/ff320f737a9604bf817d17fbc983fd3bb407244e))
+* **www:** Update client spacing ([#50](https://github.com/3ware/www-src/issues/50)) ([dfe25f1](https://github.com/3ware/www-src/commit/dfe25f1b569049d62fb0c91fae09349987d52d38))
+
+
+### Reverts
+
+* **www:** Add keybase verification txt file ([#24](https://github.com/3ware/www-src/issues/24)) ([#25](https://github.com/3ware/www-src/issues/25)) ([ac54443](https://github.com/3ware/www-src/commit/ac54443ad72b63598a8aca49b81754fb413266c2))
+
+
+### Code Refactoring
+
+* Add terraform certification ([e8e32fc](https://github.com/3ware/www-src/commit/e8e32fc84acb7765f6358dab4979a30c02fdc88e))
+* **www:** Add AWS Network Specialty certification ([#23](https://github.com/3ware/www-src/issues/23)) ([d63a676](https://github.com/3ware/www-src/commit/d63a6764ab541546ad31539ad4761d93e3b314cb))
+* **www:** Add copyright notice to website footer ([#7](https://github.com/3ware/www-src/issues/7)) ([0342186](https://github.com/3ware/www-src/commit/03421865013b787d6e016358448cd6297db5b26f))
+* **www:** Change codefence style ([84e140c](https://github.com/3ware/www-src/commit/84e140c8ff356faeee18cad10f546be1c0803de1))
+* **www:** Move keybase.txt to root of static ([#26](https://github.com/3ware/www-src/issues/26)) ([2f05894](https://github.com/3ware/www-src/commit/2f05894d4e0172e9bbf43ab575e375ecf630ac90))
+* **www:** Reduce accreditation image size ([#4](https://github.com/3ware/www-src/issues/4)) ([462f98e](https://github.com/3ware/www-src/commit/462f98e93dfbae9320611bf2c3ed25927ad6d857))
+* **www:** Remove image rendering CSS ([#8](https://github.com/3ware/www-src/issues/8)) ([3454a8a](https://github.com/3ware/www-src/commit/3454a8ad22998bf7844bdeeddbc0c72f9fe58c82))
+
 ## [3.2.1](https://github.com/3ware/www-src/compare/v3.2.0...v3.2.1) (2026-09-07)
 
 
