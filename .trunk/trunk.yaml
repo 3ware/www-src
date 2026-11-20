@@ -76,6 +76,10 @@ lint:
     - linters: [prettier, markdownlint]
       paths:
         - CHANGELOG.md
+    # Binary images are owned by oxipng
+    - linters: [pre-commit-hooks]
+      paths:
+        - static/img/**
 actions:
   disabled:
     - commitlint
