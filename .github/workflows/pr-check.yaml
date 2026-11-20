@@ -45,7 +45,10 @@ jobs:
   auto-approve-pr:
     needs: enforce-all-checks
     # auto-approve should only run on PRs created by bots and not on release-please branches
-    if: github.event.action != 'edited' && (github.event.pull_request.user.login == 'renovate[bot]' || github.event.pull_request.user.login == '3ware[bot]') && github.event.pull_request.head.ref != 'release-please--branches--main'
+    if: >-
+      github.event.action != 'edited'
+      && contains(fromJSON('["renovate[bot]", "3ware[bot]"]'), github.event.pull_request.user.login)
+      && github.event.pull_request.head.ref != 'release-please--branches--main'
     name: Approve PR
     permissions:
       contents: write # Required to enable auto-merge
