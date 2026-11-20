@@ -1,7 +1,6 @@
 # Require review from repository maintainer team
 /.editorconfig @3ware/repo-maintainers
 /.env @3ware/repo-maintainers
-/.github/PULL_REQUEST_TEMPLATE.md @3ware/repo-maintainers
 /.github/README.md @3ware/repo-maintainers
 /.github/release-please-config.json @3ware/repo-maintainers
 /.github/release-please-manifest.json @3ware/repo-maintainers
