@@ -13,7 +13,7 @@ workflows:
         - 'peaceiris/actions-hugo@v3.2.1'
     '.github/workflows/lint-and-test.yaml':
         - 'actions/checkout@v7.0.1'
-        - 'actions/dependency-review-action@v4.9.0'
+        - 'actions/dependency-review-action@v5.0.0'
     '.github/workflows/pr-check.yaml':
         - 'actions/checkout@v7.0.1'
         - 'lekman/auto-approve-action@v1'
@@ -41,9 +41,9 @@ dependencies:
         commit: 'sha1-64ab729a6294000f5aa4a4bc0b73d1f32bc45510'
         owner_id: 44036562
         repo_id: 642580244
-    'actions/dependency-review-action@v4.9.0':
-        ref: 'v4.9.0'
-        commit: 'sha1-2031cfc080254a8a887f58cffee85186f0e49e48'
+    'actions/dependency-review-action@v5.0.0':
+        ref: 'v5.0.0'
+        commit: 'sha1-a1d282b36b6f3519aa1f3fc636f609c47dddb294'
         owner_id: 44036562
         repo_id: 476372928
     'actions/download-artifact@v4.3.0':
